@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: -apple-system, "system-ui", "segoe ui", roboto, oxygen, cantarell, "helvetica neue", ubuntu, sans-serif
+
+}
+
+.upper-container {
+    background-color: blue;
+    height: 450px;
+}
+
+.navigation {
+    display:flex;
+    justify-content: space-between;
+    background-color: grey;
+    color:white;
+}
+
+.logo {
+    width: 8%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-items {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.nav-items button {
+    background-color: rgb(5, 160, 129);
+    color: white;
+    padding: 11px 28px;
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+.icon-user {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    max-height: 50px;
+    clip-path: circle();
+}
+
+.search-section {
+    width: 45%;
+    display:flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.search-bar {
+    width: 90%;
+    border: 1px solid black;
+    position: relative;
+    display:flex;
+}
+
+.search-bar img {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translate(20%, -50%)
+    
+}
+
+.search-bar input {
+    width: 92%;
+    height: 55px;
+    border: none;
+    font-size: 17px;
+    padding: 5px 20px;
+}
+
+.search-bar .img-search-bar {
+    width: 8%;
+}
+
+.middle-menu {
+    display:flex;
+    justify-content: center;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%)
+
+}
+
+.menu-tab {
+    padding: 20px 27px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    color: #5e5e5e;
+    line-height: 26px;
+    
+}
+
+.image-section {
+    background-color: pink;
+    width: 95%;
+    margin: auto;
+    height: 100%;
+}
+
+.title-tabs {
+    display:flex;
+    justify-content: space-between;
+    margin-top:30px;
+}
+
+.homepage-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    font-size: 14px;
+    font-weight: 600;
+}
