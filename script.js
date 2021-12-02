@@ -5,15 +5,24 @@ var i = 1;
 var searchBar = document.querySelector(".search-bar");
 var navSearchBar = document.querySelector(".nav-search-bar")
 
+var emptyImageColumns = function() {
+    var imageColumns = document.querySelectorAll(".image-column")
+    imageColumns.forEach(column =>{
+        column.innerHTML = ``
+    })
+}
+
 searchBar.addEventListener("submit",function(e){
     e.preventDefault();
     var searchBarValue = document.querySelector(".input-field").value;
+    emptyImageColumns()
     searchFunction(searchBarValue);
 })
 
 navSearchBar.addEventListener("submit",function(e){
     e.preventDefault();
     var navSearchBarValue = document.querySelector(".nav-input-field").value;
+    emptyImageColumns()
     searchFunction(navSearchBarValue);
 })
 
@@ -29,7 +38,10 @@ var searchFunction = function(searchValue) {
             imageData.forEach(url => {
                 var image = document.createElement("div")
                 image.classList.add("image-div")
-                image.innerHTML = `<img loading="lazy" class="rendered-image" src="${url.src.original}" alt="">`
+                
+                image.innerHTML = `<a href="${url.url}" target="_blank"><img loading="lazy" class="rendered-image" src="${url.src.large}" alt=""></a>
+                                   <div class="hidden-photo-div"> This <a href="${url.url}" target="_blank">Photo</a> was taken by <a href="${url.photographer_url}" target="_blank">${url.photographer}</a> on Pexels </div>
+                                   `
                 console.log(i);
                 
                 
@@ -41,10 +53,25 @@ var searchFunction = function(searchValue) {
                     i += 1;
                 } 
                 imageColumn.appendChild(image);
+                // imageColumn.innerHTML = `
+                //     <style> 
+                //     .image-div:hover::after {
+                //         content: "name";
+                //         width: 100%;
+                //         height: 70px;
+                //         background-color: red;
+                //         position:absolute;
+                //         bottom: 0;
+                //         left: 0;
+                //         display:inline-block;
+                //     }
+                //     </style>
+                //     <div class="image-div"><a href="${url.url}" target="_blank"><img loading="lazy" class="rendered-image" src="${url.src.large}" alt=""></a></div>
+                // `
             })
         }
     };
-    xhttp.open("GET", `https://api.pexels.com/v1/search?query=${searchValue}`, true);
+    xhttp.open("GET", `https://api.pexels.com/v1/search?query=${searchValue}&per_page=40`, true);
     xhttp.setRequestHeader("Authorization", "563492ad6f91700001000001a8cbd36d067649b99a9cf6024d207bec")
     xhttp.send();
 }
