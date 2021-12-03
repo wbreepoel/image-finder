@@ -40,7 +40,7 @@ var searchFunction = function(searchValue) {
                 image.classList.add("image-div")
                 
                 image.innerHTML = `<a href="${url.url}" target="_blank"><img loading="lazy" class="rendered-image" src="${url.src.large}" alt=""></a>
-                                   <div class="hidden-photo-div"> This <a href="${url.url}" target="_blank">Photo</a> was taken by <a href="${url.photographer_url}" target="_blank">${url.photographer}</a> on Pexels </div>
+                                   <div class="hidden-photo-div"> <p class="hidden-photo-text"><a href="${url.url}" target="_blank">Photo</a> by <a href="${url.photographer_url}" target="_blank">${url.photographer}</a> on Pexels</p> </div>
                                    `
                 console.log(i);
                 
