@@ -40,9 +40,19 @@ button:hover {
     align-items: center;
 }
 
+.logo-text {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
 .logo-text:hover {
     opacity: 0.7;
     cursor: pointer;
+}
+
+.logo-image {
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 .logo-image:hover{
@@ -101,15 +111,27 @@ button:hover {
     border-radius: 4px;
     font-size: 17px;
     font-weight: 600;
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 .nav-items button:hover {
     opacity: 0.7;
 }
 
+.nav-items p {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
 .nav-items p:hover{
     opacity: 0.7;
     cursor: pointer;
+}
+
+.nav-items img {
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 .nav-items img:hover {
@@ -205,6 +227,8 @@ button:hover {
     font-size: 17px;
     color: #5e5e5e;
     line-height: 26px;
+    opacity: 1;
+    transition: opacity 0.5s;
     
 }
 
@@ -277,6 +301,14 @@ button:hover {
     bottom: 0;
     display:flex;
     align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+.hidden-photo-div p {
+    margin:0;
+    padding-left: 15px;
+    font-size: 14px;
 }
 
 .image-div:hover > .hidden-photo-div {
@@ -287,4 +319,16 @@ button:hover {
 .rendered-image {
     width: 100%;
     height: auto;
+}
+
+.photo-icons img {
+    color:whitesmoke;
+    opacity:0.7;
+    margin-right: 20px;
+    transition: opacity 0.5s;
+}
+
+.photo-icons img:hover {
+    cursor: pointer;
+    opacity:1;
 }
